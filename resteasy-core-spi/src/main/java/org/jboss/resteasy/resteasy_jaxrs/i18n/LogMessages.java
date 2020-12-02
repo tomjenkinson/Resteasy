@@ -2,7 +2,7 @@ package org.jboss.resteasy.resteasy_jaxrs.i18n;
 
 import java.net.URL;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import org.jboss.logging.BasicLogger;
 import org.jboss.logging.Logger;
