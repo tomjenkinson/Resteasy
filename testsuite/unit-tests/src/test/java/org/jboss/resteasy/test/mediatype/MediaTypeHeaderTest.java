@@ -2,7 +2,7 @@ package org.jboss.resteasy.test.mediatype;
 
 import org.jboss.resteasy.plugins.delegates.MediaTypeHeaderDelegate;
 import org.junit.Test;
-import javax.ws.rs.BadRequestException;
+import jakarta.ws.rs.BadRequestException;
 
 public class MediaTypeHeaderTest {
 

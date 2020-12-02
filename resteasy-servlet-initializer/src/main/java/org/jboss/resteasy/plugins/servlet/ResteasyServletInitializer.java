@@ -11,10 +11,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 import javax.servlet.annotation.HandlesTypes;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Application;
-import javax.ws.rs.ext.Provider;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.ext.Provider;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -39,7 +39,7 @@ public class ResteasyServletInitializer implements ServletContainerInitializer
       if (classes == null || classes.size() == 0) return;
       for (ServletRegistration reg : servletContext.getServletRegistrations().values())
       {
-         if (reg.getInitParameter("javax.ws.rs.Application") != null)
+         if (reg.getInitParameter("jakarta.ws.rs.Application") != null)
          {
             return; // there's already a servlet mapping, do nothing
          }
@@ -107,7 +107,7 @@ public class ResteasyServletInitializer implements ServletContainerInitializer
       ServletRegistration.Dynamic reg = servletContext.addServlet(applicationClass.getName(), HttpServlet30Dispatcher.class);
       reg.setLoadOnStartup(1);
       reg.setAsyncSupported(true);
-      reg.setInitParameter("javax.ws.rs.Application", applicationClass.getName());
+      reg.setInitParameter("jakarta.ws.rs.Application", applicationClass.getName());
 
       if (path != null)
       {

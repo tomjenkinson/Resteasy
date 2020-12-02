@@ -4,9 +4,9 @@ import java.lang.reflect.ReflectPermission;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.ws.rs.NotAcceptableException;
-import javax.ws.rs.NotSupportedException;
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.NotAcceptableException;
+import jakarta.ws.rs.NotSupportedException;
+import jakarta.ws.rs.client.Client;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.RunAsClient;
